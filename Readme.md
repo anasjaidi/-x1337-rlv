@@ -115,6 +115,84 @@ function MyComponent() {
 export default MyComponent;
 ```
 
+### Example with Custom Container Style and Loading Indicator
+
+```jsx
+<ListVirtualization
+  items={items}
+  itemHeight={50}
+  numberOfItems={100}
+  loadingIndicator={<Spinner />}
+  containerStyle={{ border: '1px solid #ccc', padding: '10px' }}
+  itemRenderer={(item, index) => <div>{item}</div>}
+/>
+```
+
+### Example with Dynamic Item Heights
+
+```jsx
+<ListVirtualization
+  items={items}
+  itemHeight={(index) => Math.floor(Math.random() * 100) + 50}
+  numberOfItems={100}
+  loadingIndicator={<div>Loading...</div>}
+  itemRenderer={(item, index) => <div>{item}</div>}
+/>
+```
+
+### Example with Initial Scroll Position
+
+```jsx
+<ListVirtualization
+  items={items}
+  itemHeight={50}
+  numberOfItems={100}
+  initialScrollTop={200}
+  loadingIndicator={<div>Loading...</div>}
+  itemRenderer={(item, index) => <div>{item}</div>}
+/>
+```
+
+### Example with Custom Key Getter
+
+```jsx
+<ListVirtualization
+  items={items}
+  itemHeight={50}
+  numberOfItems={100}
+  getKey={(index) => `item-\${index}`}
+  loadingIndicator={<div>Loading...</div>}
+  itemRenderer={(item, index) => <div>{item}</div>}
+/>
+```
+
+### Example with onReachEnd Callback
+
+```jsx
+<ListVirtualization
+  items={items}
+  itemHeight={50}
+  numberOfItems={100}
+  onReachEnd={() => console.log('Reached end of list')}
+  loadingIndicator={<div>Loading...</div>}
+  itemRenderer={(item, index) => <div>{item}</div>}
+/>
+```
+
+### Example with Fetch Items Function
+
+```jsx
+<ListVirtualization
+  items={items}
+  itemHeight={50}
+  numberOfItems={100}
+  fetchItems={() => fetchMoreItems()}
+  loadingIndicator={<div>Loading...</div>}
+  itemRenderer={(item, index) => <div>{item}</div>}
+/>
+```
+
+
 ## Props
 
 - `items` (Array): Array of items to render.
