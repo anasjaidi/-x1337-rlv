@@ -1,7 +1,23 @@
 {
   "name": "@x1337/rlv",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": false,
+  "type": "module",
+  "keywords": [
+    "react",
+    "react-virtualized",
+    "react-list",
+    "react-virtualized-list",
+    "react-virtualized-list-view",
+    "react-virtualized-listview"
+  ],
+  "author": "Anas Jaidi",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+git@github.com:anasjaidi/-x1337-rlv.git"
+  },
+
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
   "scripts": {
@@ -9,10 +25,6 @@
     "build": "rollup -c",
     "dev": "rollup -c -w"
   },
-  "type": "module",
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@rollup/plugin-typescript": "^11.1.6",
     "@types/react": "^18.2.67",
